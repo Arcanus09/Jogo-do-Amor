@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Amor 🎮❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe4e1;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input, button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        input {
+            border: 2px solid #ff69b4;
+            text-align: center;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .erro {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="game">
+        <h2>Parabéns, meu Player 1! 🎉</h2>
+        <p>Você precisa provar que é um verdadeiro herói do Reino do Cogumelo. Responda corretamente para avançar na aventura!</p>
+        <button onclick="pergunta1()">Start Game 🍄</button>
+        <p id="erro" class="erro"></p>
+    </div>
+
+    <script>
+        function mostrarErro() {
+            const mensagensErro = [
+                "Oh não! Bowser riu de você! Tente de novo! 😅",
+                "Cuidado! Você caiu em um buraco do castelo! Tente de novo! 🍄",
+                "Ops! Uma casca azul acabou de te atingir! Tente novamente! 🏁",
+                "A Princesa Peach está esperando! Não desista! 👑",
+                "Você foi atingido por um Goomba! Pule e tente outra vez! 🍄"
+            ];
+            
+            let mensagemAleatoria = mensagensErro[Math.floor(Math.random() * mensagensErro.length)];
+            document.getElementById("erro").innerText = mensagemAleatoria;
+        }
+
+        function pergunta1() {
+            document.getElementById("game").innerHTML = `
+                <h2>Primeiro desafio: Onde nos conhecemos? 🌟</h2>
+                <input type="text" id="resposta1" placeholder="Digite sua resposta">
+                <button onclick="verificar1()">Enviar</button>
+                <p id="erro" class="erro"></p>
+            `;
+        }
+
+        function verificar1() {
+            let resposta = document.getElementById("resposta1").value.trim().toLowerCase();
+            if (resposta === "tinder") {
+                pergunta2();
+            } else {
+                mostrarErro();
+            }
+        }
+
+        function pergunta2() {
+            document.getElementById("game").innerHTML = `
+                <h2>Segundo desafio: Em que data você disse 'eu te amo' pela primeira vez? ❤️</h2>
+                <input type="text" id="resposta2" placeholder="Digite sua resposta (DD/MM/AAAA)">
+                <button onclick="verificar2()">Enviar</button>
+                <p id="erro" class="erro"></p>
+            `;
+        }
+
+        function verificar2() {
+            let resposta = document.getElementById("resposta2").value.trim();
+            if (resposta === "03/11/2024") {
+                pergunta3();
+            } else {
+                mostrarErro();
+            }
+        }
+
+        function pergunta3() {
+            document.getElementById("game").innerHTML = `
+                <h2>Último desafio: Quem é a pessoa que eu mais amo nesse mundo? 💖</h2>
+                <input type="text" id="resposta3" placeholder="Digite sua resposta">
+                <button onclick="verificar3()">Enviar</button>
+                <p id="erro" class="erro"></p>
+            `;
+        }
+
+        function verificar3() {
+            let resposta = document.getElementById("resposta3").value.trim().toLowerCase();
+            if (resposta === "gabriel") {
+                final();
+            } else {
+                mostrarErro();
+            }
+        }
+
+        function final() {
+            document.getElementById("game").innerHTML = `
+                <h2>Parabéns, Mario! 🏆</h2>
+                <p>Você resgatou a Princesa e venceu a fase! Aqui está seu prêmio especial:</p>
+                <a href="https://bit.ly/41btEqO" target="_blank">🎁 Clique aqui para receber sua recompensa 🎁</a>
+            `;
+        }
+    </script>
+</body>
+</html>
