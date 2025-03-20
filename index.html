@@ -14,6 +14,7 @@
       color: white;
       margin: 0;
       padding: 0;
+      cursor: url('https://i.imgur.com/VtlqrbO.png'), auto;
     }
     .container {
       max-width: 600px;
@@ -63,6 +64,28 @@
       margin-top: 10px;
       text-shadow: none;
     }
+        /* Cursor ao passar sobre links e botões */
+a, button, [onclick] {
+cursor: url('https://i.imgur.com/JGirMjz.png'), pointer !important;
+}
+/* Barra de rolagem personalizada */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #5d94fb; /* Cor do fundo da barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5d94fb; /* Azul */
+  border-radius: 10px;
+  border: 2px solid #ffffff; /* Vermelho */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a7dfb; /* Tom mais escuro ao passar o mouse */
+}
   </style>
 </head>
 <body>
