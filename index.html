@@ -64,20 +64,20 @@
 </head>
 <body>
   <div class="container" id="game">
-    <h2>PARABÉNS, MEU PLAYER 1!🎉</h2>
-    <p>VOCÊ PRECISA PROVAR QUE É UM VERDADEIRO HERÓI DO REINO DO COGUMELO. RESPONDA CORRETAMENTE PARA AVANÇAR NA AVENTURA!</p>
-    <button onclick="pergunta1()">START GAME🍄</button>
+    <h2>Parabéns, meu Player 1!🎉</h2>
+    <p>Você precisa provar que é um verdadeiro herói do Reino do Cogumelo. É fácil, você só precisará responder algumas perguntinhas. Vamos lá?</p>
+    <button onclick="pergunta1()">START 🍄</button>
     <p id="erro" class="erro"></p>
   </div>
 
   <script>
     function mostrarErro() {
       const mensagensErro = [
-        "OH, NÃO! O BOWSER RIU DE VOCÊ! TENTA DE NOVO.😅",
-        "CUIDADO! VOCÊ CAIU EM UM BURACO DO CASTELO! TENTA DE NOVO.🍄",
-        "OPS, UM CASCO AZUL ACABOU DE TE ATINGIR. TENTA DE NOVO.🏁",
-        "A PRINCESA PEACH ESTÁ ESPERANDO POR VOCÊ, NÃO DESISTA!👑",
-        "VOCÊ FOI ATINGIDO POR UM GOOMBA, PULE E TENTE OUTRA VEZ.🍄"
+        "Ixe, o Bowser riu de você! Que tal tentar de novo? 😅",
+        "Cuidado, meu bem! Você caiu em um buraco do castelo! Tenta de novo. 🍄",
+        "Eita, um casco azul acabou de te atingir. Tenta de novo. 🏁",
+        "A Princesa Peach *vulgo eu* está esperando por você! Não desista. 👑",
+        "Você foi atingido por um Goomba... Pule e tente outra vez. 🍄"
       ];
       let mensagemAleatoria = mensagensErro[Math.floor(Math.random() * mensagensErro.length)];
       document.getElementById("erro").innerText = mensagemAleatoria;
@@ -85,8 +85,8 @@
 
     function pergunta1() {
       document.getElementById("game").innerHTML = `
-        <h2>E O PRIMEIRO DESAFIO É FÁCIL: ONDE NOS CONHECEMOS?🌟</h2>
-        <input type="text" id="resposta1" placeholder="DIGITE AQUI A SUA RESPOSTA.">
+        <h2>E o primeiro desafio é fácil: Onde nos conhecemos? 🌟</h2>
+        <input type="text" id="resposta1" placeholder="Digite aqui a sua resposta.">
         <button onclick="verificar1()">ENVIAR</button>
         <p id="erro" class="erro"></p>
       `;
@@ -103,8 +103,8 @@
 
     function pergunta2() {
       document.getElementById("game").innerHTML = `
-        <h2>O SEGUNDO DESAFIO É MAIS COMPLICADO: EM QUE DATA VOCÊ DISSE 'EU TE AMO' PELA PRIMEIRA VEZ?❤️</h2>
-        <input type="text" id="resposta2" placeholder="EX:(DD/MM/AAAA)">
+        <h2>O segundo desafio é um pouco mais complicado: Em que data você disse 'Eu te amo' pela primeira vez? ❤️</h2>
+        <input type="text" id="resposta2" placeholder="Ex:(DD/MM/AAAA)">
         <button onclick="verificar2()">ENVIAR</button>
         <p id="erro" class="erro"></p>
       `;
@@ -121,8 +121,8 @@
 
     function pergunta3() {
       document.getElementById("game").innerHTML = `
-        <h2>O ÚLTIMO E MAIS IMPORTANTE DESAFIO: QUEM É A PESSOA QUE EU MAIS AMO NESSE MUNDO?💖</h2>
-        <input type="text" id="resposta3" placeholder="DIGITE AQUI A SUA RESPOSTA">
+        <h2>O último e mais importante desafio: Quem é a pessoa que eu mais amo nesse mundo? 💖</h2>
+        <input type="text" id="resposta3" placeholder="Digite aqui a sua resposta.">
         <button onclick="verificar3()">ENVIAR</button>
         <p id="erro" class="erro"></p>
       `;
@@ -139,9 +139,9 @@
 
     function final() {
       document.getElementById("game").innerHTML = `
-        <h2>MUITO BEM, MARIO! 🏆</h2>
-        <p>VOCÊ RESGATOU A PRINCESA E VENCEU A FASE! AQUI ESTÁ O SEU PRÊMIO ESPECIAL:</p>
-        <a href="https://bit.ly/41btEqO" target="_blank">🎁 CLICA AQUI PARA RECEBER A SUA RECOMPENSA 🎁</a>
+        <h2>Muito bem, Mario! 🏆</h2>
+        <p>Você resgatou a princesa e venceu a fase! Aqui está o seu prêmio especial:</p>
+        <a href="https://bit.ly/41btEqO" target="_blank">🎁 Clica aqui para receber o seu prêmio ♥ 🎁</a>
       `;
     }
   </script>
